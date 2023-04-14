@@ -114,7 +114,7 @@ Taskform uses the following dependencies:
 
 # Credits
 
-- Icons: React Icons
+- Icons: Rsuit
 
 ---
 
