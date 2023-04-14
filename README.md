@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# Taskform Project Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This project was Rsuit with Create React App.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+- Taskform is a simple web application built using React and RSuite that allows users to create, edit, and delete tasks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+- To install and run Taskform on your local machine, you need to have Node.js and npm installed. Once you have installed Node.js and npm, follow these steps:
+- Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  `git clone https://github.com/<username>/taskform.git`
 
-### `npm run build`
+- Note: Replace <username> with your GitHub username.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Navigate to the project directory:
+  `cd taskform`
+- Install the dependencies:
+  `npm install`
+- Start the development server:
+  `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### The Taskform application should now be running on http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Taskform uses the following dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+"@rsuite/icons": "^1.0.2"
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+"@testing-library/jest-dom": "^5.16.5"
 
-## Learn More
+"@testing-library/react": "^13.4.0"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+"@testing-library/user-event": "^13.5.0"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+"react": "^18.2.0"
 
-### Code Splitting
+"react-dom": "^18.2.0"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+"react-scripts": "5.0.1"
 
-### Analyzing the Bundle Size
+"rsuite": "^5.31.0"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+"web-vitals": "^2.1.4"
 
-### Making a Progressive Web App
+## About Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+- This is a React application that allows a user to create and manage a to-do list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- It has a theme changer that toggles between light and dark themes, and it uses a context provider to pass the selected theme to child components.
+- The application also uses local storage to store the user's to-do list.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- The code defines the `App` component which uses the useState hook to manage the selected theme and the user's to-do list.
+- It also creates a context using the createContext function to pass the selected theme to child components.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The handleThems function is used to toggle the selected theme between `"light"` and `"dark"` based on the onChange event of the Toggle component.
+- The `contextValue` object is created to hold the theme object that corresponds to the selected theme.
+
+- The InputFrorm component is rendered to allow the user to add new to-do items to the list.
+- The toDoList state variable is passed down to child components as props to allow them to update the list.
+
+---
+
+- The Todo, Progress, and CompeteTodo components are rendered to display the to-do list items, the progress of completing the items, and the completed items respectively.
+- The selected theme is applied to the entire application using the style attribute of the div element with the className of "App"
+
+## How to Use
+
+> Add a task:
+
+- To add a new task, you need to input the task name and
+  select a due date for the task. Then, click on the "Add task" button.
+
+> Manage tasks:
+
+- Once you have added tasks, they will appear in the "To Do" container.
+
+- Each task will have three buttons next to it - "Edit", "Delete", and "Next". You can click on "Edit" to edit the task.
+- This will open a drawer where you can update the task details. After making changes, click on the "Update" button to save your changes.
+
+> Move tasks:
+
+- You can move tasks to the "In Progress" container by clicking on the "Next" button.
+- This will move the task to the next container, indicating that you have started working on it.
+
+> Filter tasks:
+
+- The tasks will be filtered based on the due date, and they will be color-coded accordingly.
+- Tasks that have more time will be displayed in green, while tasks that have less time will be displayed in red.
+- If the task is nearing the deadline, it will be displayed in orange.
+
+> Delete tasks:
+
+- If you want to delete a task, click on the "Delete" button next to it.
+
+---
+
+# Credits
+
+- Icons: React Icons
+
+---
+
+# Demo
+
+## Here is a link to the deployed project:
+
+Project Image
+
+---
+
+---

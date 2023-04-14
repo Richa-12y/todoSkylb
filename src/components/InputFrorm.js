@@ -9,7 +9,7 @@ const styles = {
   marginBottom: 10,
 };
 
-const InputFrorm = () => {
+const InputFrorm = ({ setToDolist }) => {
   const { themes } = useContext(themContext);
   const [task, setTask] = React.useState("");
   const [currentDate, setCurrentDate] = React.useState(Date.now());
@@ -31,6 +31,7 @@ const InputFrorm = () => {
         done: [],
       };
       localStorage.setItem("todo", JSON.stringify(taskList));
+      setToDolist(taskList);
     }
 
     let oldTaskList = JSON.parse(localStorage.getItem("todo"));
@@ -41,6 +42,10 @@ const InputFrorm = () => {
         todo: [...oldTaskList.todo, { task: task, date: currentDate }],
       })
     );
+    setToDolist({
+      ...oldTaskList,
+      todo: [...oldTaskList.todo, { task: task, date: currentDate }],
+    });
   };
   return (
     <>
@@ -69,7 +74,12 @@ const InputFrorm = () => {
             onChange={(e) => setCurrentDate(e)}
           />
         </Stack>
-        <Button color="green" appearance="primary" onClick={addTask}>
+        <Button
+          color="green"
+          appearance="primary"
+          onClick={addTask}
+          style={styles}
+        >
           Add Task
         </Button>
       </div>
