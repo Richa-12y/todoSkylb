@@ -109,7 +109,7 @@ Taskform uses the following dependencies:
 > Delete tasks:
 
 - If you want to delete a task, click on the "Delete" button next to it.
-
+- it is responsive for all the devices
 ---
 
 # Credits
@@ -120,7 +120,7 @@ Taskform uses the following dependencies:
 
 # Demo
 
-## Here is a link to the deployed project:
+## Here is a link to the deployed project:[todo](https://todo-8733fe.netlify.app/)
 
 Project Image
 ![image](https://user-images.githubusercontent.com/69744397/231968249-9fc9206f-e111-499c-9873-0d389d7297f6.png)
